@@ -1,0 +1,15 @@
+
+kind create cluster --config=cluster-config.yaml --name my-cluster
+
+kind create cluster --name my-cluster
+
+
+My clusters are named as my-cluster-worker,my-cluster-worker2,my-cluster-worker3,i wanted to label as worker for  2 and 3 clusters 
+
+
+
+labels:
+ kubectl label nodes my-cluster-worker3 app=winapp
+ kubectl get nodes --show-labels
+ 
+ 

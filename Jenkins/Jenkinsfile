@@ -1,0 +1,48 @@
+pipeline{
+    agetnt{
+        docker{
+
+        }
+    }
+    stages{
+        stage('checkout'){
+            steps{}
+        }
+        stage('Build and test'){
+            steps{
+
+                sh 'cd springbootapp && mvn clean package'
+            }
+        }
+        stage('static code analysis'){
+            steps{
+
+                sh ''
+            }
+        }
+        stage('Build and push the docker image'){
+            enviornment{
+                docker credential information
+            }
+
+            steps{
+
+            }
+            
+
+        }
+        stge('update deployment file'){
+
+            steps{
+                ...
+              sh
+
+                 sed replace the image tag in deployment.uyml file
+                    git commit
+
+                    git push 
+              .....
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+ansible -i inventory -m ping all
+
+ 
+
+ansible-playbook -i inventory install_nginx.yml
+ansible-playbook --inventory inventory/hosts firstpb.yml
+
+
+
+copy private file into remote pc:
+
+scp -i "Ireland.pem" Ireland.pem ubuntu@ec2-34-246-124-234.eu-west-1.compute.amazonaws.com: ~
+
+ansible -i inventory -m ping all --private-key=/home/ubuntu/Ireland.pem
+
+ansible-playbook -i inventory firstplaybook.yml --private-key=/home/ubuntu/Ireland.pem
+
+
+ansible-playbook --inventory inventory/hosts firstpb.yml
+
+ansible -i inventory -m ping all --private-key=/home/ubuntu/Ireland.pem
+ansible-playbook -i inventory firstplaybook.yml --private-key=/home/ubuntu/Ireland.pem
+
+ssh-keygen
+
+ssh-copy-id -i public/key/path/test.pub ubuntu@ipaddress 

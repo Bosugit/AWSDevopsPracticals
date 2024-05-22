@@ -1,0 +1,62 @@
+Practicing Kubernetes concepts is essential for gaining proficiency in managing containerized applications and infrastructure. Here's a list of Kubernetes concepts along with examples and assignments for practice:
+
+Pods:
+
+Example: Create a Pod running a simple NGINX web server.
+Assignment: Deploy multiple Pods with different container images and expose them using different service types.
+Deployments:
+
+Example: Deploy an application using a Deployment controller.
+Assignment: Scale the deployment horizontally and perform rolling updates with different strategies.
+Services:
+
+Example: Expose a Pod using a Service with ClusterIP type.
+Assignment: Use different service types (NodePort, LoadBalancer, ExternalName) to expose applications.
+Ingress:
+
+Example: Configure an Ingress resource to route traffic to different services based on host or path.
+Assignment: Implement SSL termination and apply custom routing rules using annotations.
+ConfigMaps:
+
+Example: Create a ConfigMap to store configuration data and mount it into a Pod.
+Assignment: Use ConfigMaps to configure environment variables and volumes for different applications.
+Secrets:
+
+Example: Store sensitive data such as passwords or API tokens in a Secret and use it in a Pod.
+Assignment: Implement encryption at rest for Secrets and restrict access using RBAC.
+Volumes:
+
+Example: Mount a persistent volume into a Pod to store application data.
+Assignment: Use different types of volumes (emptyDir, hostPath, persistentVolumeClaim) and configure access modes.
+StatefulSets:
+
+Example: Deploy a stateful application using a StatefulSet controller.
+Assignment: Scale the StatefulSet and perform rolling updates while maintaining stateful data.
+DaemonSets:
+
+Example: Ensure that a monitoring agent is running on every node using a DaemonSet.
+Assignment: Deploy a DaemonSet for log collection and analysis across all nodes.
+Jobs and CronJobs:
+
+Example: Run a one-time task using a Job and schedule recurring tasks using a CronJob.
+Assignment: Create a Job to back up application data periodically and store it in a persistent volume.
+Horizontal Pod Autoscaler (HPA):
+
+Example: Automatically scale the number of Pods based on CPU or custom metrics using an HPA.
+Assignment: Configure an HPA for an application and set up custom metrics using Prometheus.
+RBAC (Role-Based Access Control):
+
+Example: Define roles and role bindings to grant permissions to users or service accounts.
+Assignment: Create RBAC rules to restrict access to resources based on namespaces and labels.
+Network Policies:
+
+Example: Implement network policies to control traffic flow between Pods.
+Assignment: Define network policies to allow or deny traffic based on source/destination Pods and ports.
+Monitoring and Logging:
+
+Example: Set up monitoring using Prometheus and Grafana, and logging using Elasticsearch and Kibana.
+Assignment: Configure alerts for critical events and analyze application logs for troubleshooting.
+Custom Resource Definitions (CRDs):
+
+Example: Define custom resources such as CustomResourceDefinitions (CRDs) and controllers.
+Assignment: Create a custom resource and controller to manage application-specific resources.

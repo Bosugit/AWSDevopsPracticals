@@ -1,0 +1,7 @@
+kind create cluster --config=cluster-config.yaml --name my-cluster
+kind create cluster --name my-cluster
+
+
+
+kubectl get pod <pod-name> -o json
+kubectl get pods nginx-pod -o jsonpath='{.spec.containers[*].name}'

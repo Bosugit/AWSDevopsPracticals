@@ -1,0 +1,17 @@
+---
+- name: Copy configuration file
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Copy nginx configuration file
+      copy:
+        src: /home/ubuntu/Ansible/file.txt
+        dest: /home/ubuntu/Ansible/
+      notify:
+        - Restart Nginx
+
+ handlers:
+  - name: Restart Nginx
+    service:
+      name: nginx
+    state: restarted

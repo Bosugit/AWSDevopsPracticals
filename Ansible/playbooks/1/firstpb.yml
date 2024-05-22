@@ -1,0 +1,21 @@
+---
+- name: Play to install packages and create directories
+  hosts: all
+  become: yes
+  tasks:
+    - name: Installing packages for Python environment
+      apt:
+        name:
+          - python3
+          - python3-pip
+        update_cache: yes
+
+    - name: Create directory for bash-http-server
+      file:
+        path: /path/to/directory/bash-http-server
+        state: directory
+
+    - name: Install Apache2
+      apt:
+        name: apache2
+        update_cache: yes

@@ -1,0 +1,11 @@
+---
+- name: Ensure File Exists
+  hosts: all
+  become: true
+  tasks:
+    - name: Ensure file exists
+      copy:
+        dest: /path/to/your/file.txt  # Specify the path where you want the file to be created
+        content: |
+          This is the content of your file.
+          You can add more lines as needed.

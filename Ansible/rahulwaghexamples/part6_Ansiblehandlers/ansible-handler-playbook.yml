@@ -1,0 +1,13 @@
+---
+- name: Example playbook for handlers
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+  roles:
+    - handlers
+
+  handlers:
+    - name: Restart Nginx
+      service: 
+        name: nginx
+        state: restarted
